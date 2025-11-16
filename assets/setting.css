@@ -1,0 +1,7 @@
+.add-client.new-employee{
+    justify-content: flex-start;
+}
+
+.add-client.new-employee .add-client__button{
+    padding: 16px 10px;
+}

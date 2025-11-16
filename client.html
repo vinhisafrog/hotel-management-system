@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/icon/themify-icons/themify-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>App</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+        </div>
+        <div class="container grid__row">
+            <div class="nav-section__container grid__row">
+                <div class="nav-section__name">Ho<span class="half-end">MS</span></div>
+                <div class="nav-section">
+                    <div class="nav__links grid__row">
+                        <li class="nav__links-item"><a href="index.html"><i class="ti-menu nav__icon"></i>Dashboard</a></li>
+                        <li class="nav__links-item active"><a href="#"><i class="ti-user nav__icon"></i>Client</a></li>
+                        <li class="nav__links-item"><a href="room.html"><i class="ti-home nav__icon"></i>Room</a></li>
+                        <li class="nav__links-item"><a href="reservation.html"><i class="ti-calendar nav__icon"></i>Reservation</a></li>
+                        <li class="nav__links-item"><a href="setting.html"><i class="ti-settings nav__icon"></i>Setting</a></li>
+                    </div>
+                    <div class="nav__links-item logout"><a href="#"><i class="ti-back-left nav__icon"></i>Log out</a></div>
+                </div>
+            </div>
+            <div class="middle__section grid__row">
+                <!-- add client section -->
+                <div class="section-header grid__row">
+                    <h1 class="dashboard__header">Client</h1>
+                    <div class="add-client">
+                        <button class="add-client__button openModal" data-target="#thisModal">New Client
+                            <i class="material-icons">add_2</i>
+                        </button>
+                    </div>
+                </div>
+                <!-- add client section -->
+
+
+                <!-- client table -->
+                <div class="booking__status">
+                    <div class="search-bar__container grid__row">
+                        <form>
+                            <div class="search-bar__section">
+                                <i class="material-icons">search</i>
+                                <input class="search-bar__input" type="search" placeholder="Search">
+                            </div>
+                        </form>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>CUSTOMER NAME</th>
+                                <th>EMAIL</th>
+                                <th>PHONE</th>
+                                <th>ADDRESS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Vinh cuto</td>
+                                <td>vinhcuto123@gmail.com</td>
+                                <td>12345</td>
+                                <td>Quan Cam, Sai Gon</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Vinh cuto</td>
+                                <td>vinhcuto123@gmail.com</td>
+                                <td>12345</td>
+                                <td>Quan Cam, Sai Gon</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Vinh cuto</td>
+                                <td>vinhcuto123@gmail.com</td>
+                                <td>12345</td>
+                                <td>Quan Cam, Sai Gon</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Vinh cuto</td>
+                                <td>vinhcuto123@gmail.com</td>
+                                <td>12345</td>
+                                <td>Quan Cam, Sai Gon</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Vinh cuto</td>
+                                <td>vinhcuto123@gmail.com</td>
+                                <td>12345</td>
+                                <td>Quan Cam, Sai Gon</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- client table -->
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+    <!-- Modal add client -->
+        <div class="modal" id="thisModal">
+            <div class="modal__overlay"></div>
+            <div class="modal__body add-client">
+                <div class="add-client__form">
+                    <div class="add-client__header">
+                        <div class="header-text">
+                            <h1>Assign Client To A Room</h1>
+                        </div>
+                        <div class="close-button closeModal">
+                            <i class="material-icons">close</i>
+                        </div>
+                    </div>
+                    <div class="sub-header-text">
+                        <h3>Fill In The Form Below</h3>
+                    </div>
+                    <div class="contact-input">
+                        <div class="input-container">
+                            <h3>Client Name</h3>
+                            <div class="input-layout">
+                                <i class="material-icons">person</i>
+                                <input type="text" class="auth-form__input client" placeholder="Enter name">
+                            </div>
+                        </div> 
+                        <div class="input-container">
+                            <h3>Phone Number</h3>
+                            <div class="input-layout">
+                                <i class="material-icons">phone</i>
+                                <input type="text" class="auth-form__input client" placeholder="Enter name">
+                            </div>
+                        </div>
+                    </div>
+                        <div class="input-container">
+                            <h3>Email</h3>
+                            <div class="input-layout">
+                                <i class="material-icons">email</i>
+                                <input type="text" class="auth-form__input client" placeholder="Enter name">
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <h3>Address</h3>
+                            <div class="input-layout">
+                                <i class="material-icons">home</i>
+                                <input type="text" class="auth-form__input client" placeholder="Enter name">
+                            </div>
+                        </div>
+                    <button class="auth__button add-client">Confirm</button>
+                </div>
+            </div>
+        </div>
+    <!-- Modal add client -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/room.css">
+    <link rel="stylesheet" href="./assets/icon/themify-icons/themify-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>App</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+        </div>
+        <div class="container grid__row">
+            <div class="nav-section__container grid__row">
+                <div class="nav-section__name">Ho<span class="half-end">MS</span></div>
+                <div class="nav-section">
+                    <div class="nav__links grid__row">
+                        <li class="nav__links-item"><a href="index.html"><i class="ti-menu nav__icon"></i>Dashboard</a></li>
+                        <li class="nav__links-item"><a href="client.html"><i class="ti-user nav__icon"></i>Client</a></li>
+                        <li class="nav__links-item active"><a href="room.html"><i class="ti-home nav__icon"></i>Room</a></li>
+                        <li class="nav__links-item"><a href="reservation.html"><i class="ti-calendar nav__icon"></i>Reservation</a></li>
+                        <li class="nav__links-item"><a href="setting.html"><i class="ti-settings nav__icon"></i>Setting</a></li>
+                    </div>
+                    <div class="nav__links-item logout"><a href="#"><i class="ti-back-left nav__icon"></i>Log out</a></div>
+                </div>
+            </div>
+            <div class="middle__section grid__row">
+                <!-- add client section -->
+                <div class="section-header grid__row">
+                    <h1 class="dashboard__header">Room</h1>
+                    <div class="add-client">
+                        <button class="add-client__button openModal" data-target="#thisModal">Assign Client
+                            <i class="material-icons">add_2</i>
+                        </button>
+                    </div>
+                </div>
+                <!-- add client section -->
+                <!-- client table -->
+                <div class="booking__status">
+                    <div class="search-bar__container grid__row">
+                        <form>
+                            <div class="search-bar__section">
+                                <i class="material-icons">search</i>
+                                <input class="search-bar__input" type="search" placeholder="Search">
+                            </div>
+                        </form>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ROOM ID</th>
+                                <th>ROOM NUMBER</th>
+                                <th>TYPE</th>
+                                <th>FLOOR</th>
+                                <th>CHECK OUT</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>A1.101</td>
+                                <td>Single Room</td>
+                                <td>1</td>
+                                <td>23/11/2025</td>
+                                <td>Checked-in</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>A1.102</td>
+                                <td>Single Room</td>
+                                <td>1</td>
+                                <td>23/11/2025</td>
+                                <td>Checked-in</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>A1.103</td>
+                                <td>Single Room</td>
+                                <td>1</td>
+                                <td>23/11/2025</td>
+                                <td>Checked-in</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>A1.204</td>
+                                <td>Deluxe</td>
+                                <td>2</td>
+                                <td>...</td>
+                                <td>Free</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>A1.205</td>
+                                <td>Deluxe</td>
+                                <td>2</td>
+                                <td>...</td>
+                                <td>Free</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="add-client room">
+                        <button class="add-client__button openModal room" data-target="#thisModal1">Add room
+                            <i class="material-icons">add_2</i>
+                        </button>
+                    </div>
+                </div>
+                <!-- client table -->
+            </div>
+
+        </div>
+        
+        <div class="footer">
+
+        </div>
+    </div>
+    <!-- Modal add client -->
+        <div class="modal" id="thisModal">
+            <div class="modal__overlay"></div>
+            <div class="modal__body add-client">
+                <div class="add-client__form assign-room">
+                    <div class="add-client__header">
+                        <div class="header-text">
+                            <h1>Assign Client To A Room</h1>
+                        </div>
+                        <div class="close-button closeModal">
+                            <i class="material-icons">close</i>
+                        </div>
+                    </div>
+                    <div class="sub-header-text">
+                        <h3>Fill In The Form Below</h3>
+                    </div>
+                    <div class="contact-input assign-room">
+                        <div class="input-container">
+                            <h3>Checked-In</h3>
+                            <div class="input-layout">
+                                <i class="material-icons">event</i>
+                                <input type="date" class="auth-form__input client" placeholder="Enter name">
+                            </div>
+                        </div> 
+                        <div class="input-container">
+                            <h3>Check Out</h3>
+                            <div class="input-layout">
+                                <i class="material-icons">event_busy</i>
+                                <input type="date" class="auth-form__input client" placeholder="Enter name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-input assign-room">
+                        <div class="input-container">
+                            <h3>Customer ID</h3>
+                            <div class="input-layout">
+                                <i class="material-icons">person</i>
+                                <input type="text" class="auth-form__input client" placeholder="Enter name">
+                            </div>
+                        </div>
+                        <div class="input-container select-menu">
+                            <h3>Room Type</h3>
+                            <div class="input-layout select-menu">
+                                <span class="text">Select your option</span>
+                                <i class="material-icons">arrow_drop_down</i>
+                                <ul class="options">
+                                    <li class="option">
+                                        <span class="option-text">Single Room</span>
+                                    </li>
+                                    <li class="option">
+                                        <span class="option-text">Deluxe Room</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <h3>Note(*)</h3>
+                        <div class="input-layout">
+                            <i class="material-icons">edit_square</i>
+                            <input type="text" class="auth-form__input client" placeholder="Enter name">
+                        </div>
+                    </div> 
+                    <button class="auth__button add-client">Confirm</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="thisModal1">
+            <div class="modal__overlay"></div>
+            <div class="modal__body add-client">
+                <div class="add-client__form assign-room">
+                    <div class="add-client__header">
+                        <div class="header-text">
+                            <h1>Add New Room</h1>
+                        </div>
+                        <div class="close-button closeModal">
+                            <i class="material-icons">close</i>
+                        </div>
+                    </div>
+                    <div class="sub-header-text">
+                        <h3>Fill In The Form Below</h3>
+                    </div>
+                    <div class="contact-input assign-room">
+                        <div class="input-container">
+                            <h3>Customer ID</h3>
+                            <div class="input-layout">
+                                <i class="material-icons">person</i>
+                                <input type="text" class="auth-form__input client" placeholder="Enter name">
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <h3>Floor</h3>
+                            <div class="input-layout">
+                                <i class="material-icons">numbers</i>
+                                <input type="text" class="auth-form__input client" placeholder="Enter name">
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="input-container select-menu">
+                        <h3>Room Type</h3>
+                        <div class="input-layout select-menu">
+                            <span class="text">Select your option</span>
+                            <i class="material-icons">arrow_drop_down</i>
+                            <ul class="options">
+                                <li class="option">
+                                    <span class="option-text">Single Room</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">Deluxe Room</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="auth__button add-client">Confirm</button>
+                </div>
+            </div>
+        </div>
+    <!-- Modal add client -->
+    <script src="script.js"></script>
+</body>
+</html>

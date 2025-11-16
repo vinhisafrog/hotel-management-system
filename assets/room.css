@@ -1,0 +1,92 @@
+
+
+/* drop down menu */
+
+
+.input-container.select-menu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.modal__body.add-client .input-container h3{
+    font-size: 1.2rem;
+}
+
+.input-layout.select-menu{
+    display: flex;
+    cursor: pointer;
+    gap: 0px;
+    justify-content: space-between;
+}
+
+.input-layout.select-menu .text{
+    border: none;
+    margin-left: 1rem;
+    padding: 1.2rem 0rem;
+    border-radius: 1.5rem;
+    outline: none;
+    margin-right: 1rem;
+}
+
+.input-layout.select-menu i{
+    margin-right: 1rem;
+    transition: 0.3s;
+}
+
+.input-container.select-menu.active i{
+    transform: rotate(-180deg);
+}
+
+
+.input-container .options{
+    position: absolute;
+    display: none;
+    width: 100%;
+    transform: translateY(74px);
+    box-shadow:  0 0 3px rgba(0, 0, 0, 0.1);
+
+}
+
+.input-container.select-menu.active .options{
+    display: block;
+}
+
+.input-container .option{
+    width: 100%;
+    position: relative;
+    padding: 0rem 1.6rem;
+    padding: 1.4rem 0rem;
+    background-color: #fff;
+    
+    cursor: pointer;
+    z-index: 999;
+}
+
+.input-container .option-text{
+    margin-left: 1.6rem;
+}
+
+.input-container .option:hover{
+    background-color: #e0e0e0;
+}
+
+.add-client.room{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.add-client__button.openModal.room{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 0rem;
+    font-size: 1.2rem;
+    background-color: #a6a6a6;
+}
+
+.add-client__button.openModal.room:hover{
+    background-color: #b2b2b2;
+}
+

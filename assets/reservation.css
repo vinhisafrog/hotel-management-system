@@ -1,0 +1,40 @@
+
+.header-text h1{
+    font-size: 16px;
+    font-weight: var(----text-regular);
+}
+
+.add-client__form{
+    padding: 1rem 2rem;
+}
+
+.add-client.remove{
+    display: flex;
+    justify-content: center;
+}
+
+.add-client.remove .add-client__button.openModal{
+    color: var(--text-un-active);
+    border: none;
+    background: none;
+}
+
+.add-client.remove .material-icons{
+    font-size: 18px;
+}
+
+.auth__button.add-client{
+    flex: auto;
+    border-radius:0;
+    padding: 1.2rem 0rem;
+}
+
+.modal__body.add-client{
+    width: auto;
+    border-radius: 15px;
+}
+
+.choice-section{
+    display: flex;
+    gap: 40px;
+}

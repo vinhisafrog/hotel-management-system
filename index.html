@@ -3,23 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/icon/themify-icons/themify-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>App</title>
 </head>
 <body>
-    <div class="nav">
-        <div class="nav__logo">App name</div>
-        <ul class="nav__links">
-            <li class="link"><a href="#">Dashboard</a></li>
-            <li class="link"><a href="#">Client</a></li>
-            <li class="link"><a href="#">Room</a></li>
-            <li class="link"><a href="#">Reservation</a></li>
-            <li class="link"><a href="#">Setting</a></li>
-        </ul>
+    <div class="main">
+        <div class="header">
+        </div>
+        <div class="container grid__row">
+            <div class="auth grid__row">
+                <div class="auth__item--login">
+                    <a href="#" class="login openModal" data-target="#loginModal">
+                        <i class="ti-user"></i>Log in
+                    </a>
+                </div>
+            </div>
+
+            <!-- dash board section -->
+            <div class="nav-section__container grid__row">
+                <div class="nav-section__name">Ho<span class="half-end">MS</span></div>
+                <div class="nav-section">
+                    <div class="nav__links grid__row">
+                        <li class="nav__links-item active"><a href="#"><i class="ti-menu nav__icon"></i>Dashboard</a></li>
+                        <li class="nav__links-item"><a href="client.html"><i class="ti-user nav__icon"></i>Client</a></li>
+                        <li class="nav__links-item"><a href="room.html"><i class="ti-home nav__icon"></i>Room</a></li>
+                        <li class="nav__links-item"><a href="reservation.html"><i class="ti-calendar nav__icon"></i>Reservation</a></li>
+                        <li class="nav__links-item"><a href="setting.html"><i class="ti-settings nav__icon"></i>Setting</a></li>
+                    </div>
+                    <div class="nav__links-item logout"><a href="#"><i class="ti-back-left nav__icon"></i>Log out</a></div>
+                </div>
+            </div>
+            <!-- dash board section -->
+
+            <div class="middle__section grid__row">
+                
+                <div class="section-header grid__row">
+                    <h1 class="dashboard__header">Dashboard</h1>
+                    <!-- <div class="profile grid__row">
+                        <div class="profile__info">
+                            <p class="user-name">Vinhgiangmai</p>
+                            <p class="user-class">Employee</p>
+                        </div>
+                        <div class="profile__photo">
+                            <img src="./assets/img/Untitled-2.png" alt="">
+                        </div>
+                    </div> -->
+                </div>
+
+                <div class="date">
+                    <input type="date" >
+                </div>
+
+                <!-- dashboard list -->
+                <div class="dashboard__list grid__row">
+                    <div class="dashboard__item">
+                        <div class="item__left grid__row">
+                            <i class="material-icons customer">group</i>
+                            <h3>Total Guest</h3>
+                            <h1>25,000</h1>
+                            <small>Last 24 Hours</small>
+                        </div>
+                        <div class="item__progress customer">
+                            <svg>
+                                <circle cx = '38' cy = '38' r = '28'></circle>
+                            </svg>
+                            <div class="number">36%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard__item">
+                        <div class="item__left grid__row">
+                            <i class="material-icons booking">book</i>
+                            <h3>Total Booking</h3>
+                            <h1>27,000</h1>
+                            <small>Last 24 Hours</small>
+                        </div>
+                        <div class="item__progress booking">
+                            <svg>
+                                <circle cx = '38' cy = '38' r = '28'></circle>
+                            </svg>
+                            <div class="number">36%</div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard__item">
+                        <div class="item__left grid__row">
+                            <i class="material-icons amount">insert_chart</i>
+                            <h3>Total Amount</h3>
+                            <h1>$25,000</h1>
+                            <small>Last 24 Hours</small>
+                        </div>
+                        <div class="item__progress amount">
+                            <svg>
+                                <circle cx = '38' cy = '38' r = '28'></circle>
+                            </svg>
+                            <div class="number">36%</div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard__item">
+                        <div class="item__left grid__row">
+                            <i class="material-icons income">attach_money</i>
+                            <h3>Revenue</h3>
+                            <h1>$2,400</h1>
+                            <small>Last 24 Hours</small>
+                        </div>
+                        <div class="item__progress income">
+                            <svg>
+                                <circle cx = '38' cy = '38' r = '28'></circle>
+                            </svg>
+                            <div class="number">36%</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- dashboard list -->
+
+                <!-- dashboard table -->
+                <div class="booking__status">
+                    <h1 class="status__header">Recent Orders</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>CUSTOMER NAME</th>
+                                <th>ROOM TYPE</th>
+                                <th>CHECK IN</th>
+                                <th>CHECK OUT</th>
+                                <th>PAID AMOUNT</th>
+                                <th>PAYMENT STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Vinh cuto</td>
+                                <td>Deluxe</td>
+                                <td>07/10/2025</td>
+                                <td>08/10/2025</td>
+                                <td>9000$</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Vinh cuto</td>
+                                <td>Deluxe</td>
+                                <td>07/10/2025</td>
+                                <td>08/10/2025</td>
+                                <td>9000$</td>
+                                <td><span class="status success">Success</span></td>
+                            </tr>
+                            <tr>
+                                <td>Vinh cuto</td>
+                                <td>Deluxe</td>
+                                <td>07/10/2025</td>
+                                <td>08/10/2025</td>
+                                <td>9000$</td>
+                                <td><span class="status cancel">Cancelled</span></td>
+                            </tr>
+                            <tr>
+                                <td>Vinh cuto</td>
+                                <td>Deluxe</td>
+                                <td>07/10/2025</td>
+                                <td>08/10/2025</td>
+                                <td>9000$</td>
+                                <td><span class="status success">Success</span></td>
+                            </tr>
+                            <tr>
+                                <td>Vinh cuto</td>
+                                <td>Deluxe</td>
+                                <td>07/10/2025</td>
+                                <td>08/10/2025</td>
+                                <td>9000$</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- dashboard table -->
+
+            </div>
+        </div>
+        <div class="footer">
+        </div>
     </div>
-    
+    <!-- Modal log -->
+        <div class="modal assignModal" id="loginModal">
+            <div class="modal__overlay"></div>
+            <div class="modal__body">
+                <div class="modal__inner grid__row">
+                    <div class="auth-form">
+                        <div class="auth-form__header grid__row">
+                            <h3 class="auth-form__icon">App name</h3>
+                            <a href="#" class="auth-form__return-button closeModal"><i class="ti-arrow-left"></i>Go back</a>
+                        </div>
+                        <div class="auth-form__form">
+                            <div class="add-client__header">
+                                <div class="header-text">
+                                    <h1>Log in</h1>
+                                </div>
+                            </div>
+                            <div class="auth-form__group-container">
+                                <div class="auth-form__group">
+                                    <input type="text" class="auth-form__input" placeholder="Enter email">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input type="text" class="auth-form__input" placeholder="Enter password">
+                                </div>
+                            </div>
+                            <button class="auth__button">Confirm</button>
+                        </div>
+                        
+                        <div class="switch-button">
+                            <span class="switch-button__text">Admin account?
+                                <a href="" class="switch-button__link">Click here</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="auth-form--image"><img src="./assets/img/photo-1542314831-068cd1dbfeeb.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    <!-- Modal log -->
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/room.css">
+    <link rel="stylesheet" href="./assets/setting.css">
+    <link rel="stylesheet" href="./assets/icon/themify-icons/themify-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>App</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+        </div>
+        <div class="container grid__row">
+            <div class="nav-section__container grid__row">
+                <div class="nav-section__name">Ho<span class="half-end">MS</span></div>
+                <div class="nav-section">
+                    <div class="nav__links grid__row">
+                        <li class="nav__links-item"><a href="index.html"><i class="ti-menu nav__icon"></i>Dashboard</a></li>
+                        <li class="nav__links-item"><a href="client.html"><i class="ti-user nav__icon"></i>Client</a></li>
+                        <li class="nav__links-item"><a href="room.html"><i class="ti-home nav__icon"></i>Room</a></li>
+                        <li class="nav__links-item"><a href="reservation.html"><i class="ti-calendar nav__icon"></i>Reservation</a></li>
+                        <li class="nav__links-item active"><a href="#"><i class="ti-settings nav__icon"></i>Setting</a></li>
+                    </div>
+                    <div class="nav__links-item logout"><a href="#"><i class="ti-back-left nav__icon"></i>Log out</a></div>
+                </div>
+            </div>
+            <div class="middle__section grid__row">
+                <!-- add client section -->
+                <div class="section-header grid__row">
+                    <h1 class="dashboard__header">Setting</h1>
+                </div>
+                <!-- add client section -->
+                <!-- client table -->
+                <div class="add-client new-employee">
+                    <button class="add-client__button openModal" data-target="#thisModal">Add new employee
+                        <i class="material-icons">add_2</i>
+                    </button>
+                </div>
+                <!-- client table -->
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+    <!-- Modal add client -->
+        <div class="modal assignModal" id="thisModal">
+            <div class="modal__overlay"></div>
+            <div class="modal__body">
+                <div class="modal__inner grid__row">
+                    <div class="auth-form--image register"><img src="./assets/img/DSC_2755-HDR.jpg" alt=""></div>
+                    <div class="auth-form register-form">
+                        <div class="auth-form__header grid__row">
+                            <h3 class="auth-form__icon">App name</h3>
+                            <a href="#" class="auth-form__return-button closeModal"><i class="ti-arrow-left"></i>Go back</a>
+                        </div>
+                        <div class="auth-form__form register">
+                            <div class="add-client__header">
+                                <div class="header-text">
+                                    <h1>Sign up</h1>
+                                </div>
+                            </div>
+                            <div class="auth-form__group-container register grid__row">
+                                <div class="auth-form__group doubled grid__row">
+                                    <input type="text" class="auth-form__input" placeholder="Enter name">
+                                    <input type="text" class="auth-form__input" placeholder="Phone number">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input type="text" class="auth-form__input" placeholder="Enter email">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input type="text" class="auth-form__input" placeholder="Enter password">
+                                </div>
+                                <button class="auth__button register">Confirm</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Modal add client -->
+    <script src="script.js"></script>
+</body>
+</html>
